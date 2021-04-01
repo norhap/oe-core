@@ -4,7 +4,7 @@ HOMEPAGE = "https://streamlink.github.io/"
 SECTION = "devel/python"
 LICENSE = "BSD"
 
-LIC_FILES_CHKSUM = "file://LICENSE;md5=6e2f7fbdd7536a59eed68a6b8e99dbf7"
+LIC_FILES_CHKSUM = "file://LICENSE;md5=7c0be52291b7252b878da806d185b1d1"
 
 inherit setuptools
 
@@ -27,14 +27,14 @@ RDEPENDS_${PN} = " \
 	python-websocket-client \
 	"
 
-SRC_URI = "git://github.com/streamlink/streamlink.git;protocol=git"
-SRCREV = "51916b88adadaab4e06ff1bc96a661ad2e5f2da5"
+SRC_URI = "git://github.com/Billy2011/streamlink-27.git;protocol=git"
+SRCREV = "${AUTOREV}"
 S = "${WORKDIR}/git/"
 
 inherit gitpkgv python-dir
 
-PV = "1.7.0+git${SRCPV}"
-PKGV = "1.7.0+git${GITPKGV}"
+PV = "2.0.0+git${SRCPV}"
+PKGV = "2.0.0+git${GITPKGV}"
 PR = "r0"
 
 do_install_append() {
